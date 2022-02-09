@@ -1,45 +1,34 @@
 <template>
-    <div >
-        <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"  method="post">
-
-            <lightning-layout horizontal-align="center" >
-                <lightning-input name="oid" value="00D0p00000018AP" type=hidden> </lightning-input>
-                <lightning-input name="retURL"
-                    value="https://i.pinimg.com/originals/e0/a6/2a/e0a62a1a6e5b81d588f33a5b63a52202.gif" type=hidden>
-                </lightning-input>
-                <lightning-layout-item size="5">
-                    <lightning-input class="slds-p-around_small" label="First name"  name="first_name" required="true">
-                    </lightning-input>
-                    <lightning-input name="email" class="slds-p-around_small" type="email" label="Email" pattern="[A-Za-z0-9._-]+@[a-z0-9-]+\.[a-z]{2,}$" message-when-pattern-mismatch="Please enter a valid email" required></lightning-input>
-                    <lightning-input class="slds-p-around_small" label="state" name="state" required="true">
-                    </lightning-input>
-                    <lightning-input class="slds-p-around_small" label="city" name="city" required="true">
-                    </lightning-input>
-                                 <lightning-input class="slds-p-around_small"  label="NumberOfEmployees" name="Number_of_Employees__c" required="true">
-                    </lightning-input>
-                    
-                </lightning-layout-item>
-                <lightning-layout-item size="5" >
-                    <lightning-input class="slds-p-around_small" label="Last Name" name="last_name" required="true">
-                    </lightning-input>
-                     <lightning-input name="MobilePhone" class="slds-p-around_small" type="tel" label="MobilePhone" pattern="[789][0-9]{9}" message-when-pattern-mismatch="Please enter a valid phone number" required></lightning-input>
-                   
-                    <lightning-input class="slds-p-around_small" label="company"  name="company" required="true">
-                    </lightning-input>
-                    <lightning-input class="slds-p-around_small" label="Expected Budget" name="Expected_Budget__c" required="true">
-                    </lightning-input>
-                    <lightning-input class="slds-p-around_small" label="Expected Duration" name="Expected_Duration_in_Days__c" required="true">
-                    </lightning-input>
-                 
-                </lightning-layout-item>
-                <!-- <lightning-layout-item class="body"><marquee width="500%" direction="down" scrollamount="10" height="400px">
-                    HEALTH FORCE
-                    </marquee></lightning-layout-item> -->
-            </lightning-layout>
-            
-            <lightning-button class="slds-align_absolute-center" label="Register" type="submit" variant="brand">
-            </lightning-button>
-            
-        </form>
+    <div class="body1">
+        <div class="container">
+            <div class="title">Please Fill the Form</div>
+            <div class="content">
+                <form>
+                    <lightning-record-edit-form object-api-name={accountObject} onsuccess={handleAccountCreated} onerror={handleerror} >
+                        <div class="user-details">
+                            <div class="input-box">
+                                <lightning-input-field field-name={contactfield} required="true">
+                                </lightning-input-field>
+                                <lightning-input-field field-name={ProjectField} required="true">
+                                </lightning-input-field>
+                            </div>
+                            <div class="input-box">
+                                <lightning-input-field field-name={caseType} required="true"></lightning-input-field>
+                                <lightning-input-field field-name={caseReason} required="true"></lightning-input-field>
+                            </div>
+                            <div class="input-box">
+                                <lightning-input-field field-name={CaseSubject} required="true">
+                                </lightning-input-field>
+                            </div>
+                            <div class="input-box">
+                                <lightning-input-field field-name={Desc} required="true">
+                                </lightning-input-field>
+                            </div>
+                        </div>
+                        <lightning-button type="submit" variant="brand" label="Create Case"></lightning-button>
+                    </lightning-record-edit-form>
+                </form>
+            </div>
+        </div>
     </div>
 </template>

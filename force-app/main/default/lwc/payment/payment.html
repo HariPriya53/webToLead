@@ -1,0 +1,52 @@
+<template>
+    <div class="body1">
+        <div class="container">
+            <div class="title">Please Make the Payment</div>
+            <div class="content">
+                <form>
+                    <lightning-record-edit-form object-api-name={Payobject} onsuccess={handleAccountCreated} onerror={handleerror} >
+                        <div class="user-details">
+                        
+                            <div class="input-box">
+                                <lightning-input-field field-name={payType} required="true">
+                                </lightning-input-field>
+                                <lightning-input-field field-name={paymode} required="true">
+                                </lightning-input-field>
+                            </div>
+                            <div class="input-box">
+                                <lightning-input-field field-name={project} required="true">
+                                </lightning-input-field>
+                                
+                            </div>
+                          
+                        </div>
+                        <lightning-button type="submit" variant="brand" label="Make Payment"></lightning-button>
+                    </lightning-record-edit-form>
+                </form>
+            </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <div class="container" align="left">
+            <div class="title">Please Activate The Warranty</div>
+            <div class="content">
+                <form>
+                    <lightning-record-edit-form object-api-name={WarObject} onsuccess={handleAccountCreated1} onerror={handleerror1} >
+                        <div class="user-details">
+                        
+                            <div class="input-box">
+                                <lightning-input-field field-name={ProjectWar} required="true">
+                                </lightning-input-field>
+                                <lightning-input-field field-name={warantyType} required="true">
+                                </lightning-input-field>
+                            </div>
+                           
+                          
+                        </div>
+                        <lightning-button type="submit" variant="brand" label="Activate Warranty"></lightning-button>
+                    </lightning-record-edit-form>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>
