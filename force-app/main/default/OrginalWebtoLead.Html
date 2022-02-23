@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<div class="body">
+
+
+  <div class="container">
+    <div class="title">Please Fill the Form</div>
+    <div class="content">
+ <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name="oid" value="00D0p00000018AP">
+          <input type=hidden name="lead_source" value="Website">
+     <input type=hidden name="Actual_Budget__c" value="0">
+     <input type=hidden name="employees" value="0">
+<input type=hidden name="retURL" value="https://c2m1-hfs.cs74.force.com/customer/s/thankyou">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" id="first_name" name="first_name" placeholder="Enter your First name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" id="last_name" name="last_name" placeholder="Enter your Last name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" id="email" name="email" pattern="[A-Za-z0-9._-]+@[a-z0-9-]+\.[a-z]{2,}$"  placeholder="Enter your Email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" id="phone" name="phone" placeholder="Enter your Mobile number" pattern="[789][0-9]{9}"  required>
+          </div>
+          <div class="input-box">
+            <span class="details">State/Province</span>
+           <input type="text" id="state" name="state" placeholder="Enter your State" required>
+          </div>
+          <div class="input-box">
+            <span class="details">City</span>
+           <input type="text" id="city" name="city" placeholder="Enter your CIty" required>
+          </div>
+        
+           <div class="input-box">
+            <span class="details">company</span>
+           <input type="text" id="company" name="company" placeholder="Enter your Company" required>
+            </div>
+            <div class="input-box">
+            <span class="details">Expected No Of Employees</span>
+<select  id="00N0p000007eWXr" name="00N0p000007eWXr" title="Expected No Of Employees"><option value="">--None--</option><option value="Less than 5">Less than 5</option>
+<option value="Between 5 and 10">Between 5 and 10</option>
+<option value="Greater than 10">Greater than 10</option>
+                </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Expected Budget:</span>
+        <select  id="00N0p000007eJAR" name="00N0p000007eJAR" title="Expected Budget"><option value="">--None--</option><option value="less_than_2_lakhs">less than 2 lakhs</option>
+<option value="Between_2_Lakhs_to _5_Lakhs">Between 2 Lakhs to  5 Lakhs</option>
+<option value="More_than_5_Lakhs">More than 5 Lakhs</option>
+</select>
+          </div>
+       
+           
+          <div class="input-box">
+            <span class="details">Expected Duration:</span>
+     <select  id="00N0p000007eKrs" name="00N0p000007eKrs" title="Expected Duration"><option value="">--None--</option><option value="Less than 3 months">Less than 3 months</option>
+<option value="Between 3 to 6 months">Between 3 to 6 months</option>
+<option value="More than 6 months">More than 6 months</option>
+</select>
+            </div></div>
+      
+          
+        <div class="button">
+          <input type="submit" name="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
